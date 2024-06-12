@@ -15,4 +15,9 @@ public class Author {
         return lastName;
 
     }
+
+    @Override
+    public String toString() {
+        return "Имя - " + this.firstName + " Фамилия - " + this.lastName;
+    }
 }
