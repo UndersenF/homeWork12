@@ -38,11 +38,17 @@ public class Book {
             return false;
         }
         Book firstBook = (Book) other;
-        return nameOfBook.equals(firstBook.nameOfBook);
+        boolean bookComparison = ((nameOfBook.equals(firstBook.nameOfBook)) && (author.equals(firstBook.author)) && (publishingYear == firstBook.publishingYear));
+        return bookComparison;
     }
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(nameOfBook);
+        return java.util.Objects.hash(nameOfBook, author, publishingYear);
+    }
+
+    @Override
+    public String toString() {
+        return ("Назваине книги - " + nameOfBook + " Автор - " + author + " Год публикации - " + publishingYear);
     }
 }

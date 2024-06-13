@@ -6,16 +6,17 @@ public class Main {
 
         Book firstBook = new Book("Harry Potter", firstAuthor, 2000);
         Book secondBook = new Book("When Nietzsche Wept", secondAuthor, 1992);
-        Book thirdBook = new Book("When Nietzsche Wept", secondAuthor, 1995);
+        Book thirdBook = new Book("When Nietzsche Wept", secondAuthor, 1996);
 
+        //проверки
         System.out.println("Год публикации до изменения - " + secondBook.getPublishingYear());
         secondBook.setPublishingYear(1995);
         System.out.println("Год публикации после - " + secondBook.getPublishingYear());
 
         System.out.println("\n" + secondAuthor);
-
         boolean bookComparison = thirdBook.equals(secondBook);
         System.out.println(bookComparison);
+        System.out.println(firstBook);
 
 
     }
